@@ -1,0 +1,22 @@
+[package]
+name = "ix_decoder"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies.solana-sdk]
+version = "1.18"
+[dependencies.solana-transaction-status]
+version = "1.18"
+[dependencies.arrayref]
+version = "0.3"
+[dependencies.serde]
+version = "1"
+features = ["derive"]
+[dependencies.serde_json]
+version = "1"
+[dependencies.anyhow]
+version = "1"
+[dependencies.bs58]
+version = "0.4.0"
+[dependencies.once_cell]
+version = "1"
