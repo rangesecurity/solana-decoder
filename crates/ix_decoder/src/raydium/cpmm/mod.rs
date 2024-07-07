@@ -75,7 +75,9 @@ impl CpmmDecoder {
                 accounts: Default::default(),
             }),
 
-            AmmInstruction::MonitorStep(MonitorStepInstruction) => {
+            AmmInstruction::MonitorStep(ix) => Ok(DecodedInstruction {
+                
+            })
                 unimplemented!()
             }
 

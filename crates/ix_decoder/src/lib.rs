@@ -97,7 +97,7 @@ pub fn try_program_decoder(
 mod test {
     use super::*;
     #[test]
-    fn test_program_decoder() {
+    fntest_program_decoder() {
         let ix_json = serde_json::json!({
             "accounts": [
               "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
