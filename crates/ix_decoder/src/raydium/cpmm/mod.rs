@@ -75,9 +75,7 @@ impl CpmmDecoder {
                 accounts: Default::default(),
             }),
 
-            AmmInstruction::MonitorStep(ix) => Ok(DecodedInstruction {
-                
-            })
+            AmmInstruction::MonitorStep(ix) => {
                 unimplemented!()
             }
 
@@ -89,19 +87,15 @@ impl CpmmDecoder {
             }
             AmmInstruction::MigrateToOpenBook {} => {
                 unimplemented!()
-
             }
             AmmInstruction::SetParams(SetParamsInstruction) => {
                 unimplemented!()
-
             }
             AmmInstruction::WithdrawPnl => {
                 unimplemented!()
-
             }
             AmmInstruction::WithdrawSrm(WithdrawSrmInstruction) => {
                 unimplemented!()
-
             }
             AmmInstruction::SwapBaseIn(ix) => Ok(DecodedInstruction {
                 data: [
@@ -124,16 +118,26 @@ impl CpmmDecoder {
                 .collect(),
                 accounts: Default::default(),
             }),
-            AmmInstruction::PreInitialize(PreInitializeInstruction) => {                unimplemented!()
+            AmmInstruction::PreInitialize(PreInitializeInstruction) => {
+                unimplemented!()
             }
-            AmmInstruction::SwapBaseOut(SwapInstructionBaseOut) => {                unimplemented!()
+            AmmInstruction::SwapBaseOut(SwapInstructionBaseOut) => {
+                unimplemented!()
             }
 
-            AmmInstruction::SimulateInfo(SimulateInstruction) => { unimplemented!()}
+            AmmInstruction::SimulateInfo(SimulateInstruction) => {
+                unimplemented!()
+            }
 
-            AmmInstruction::AdminCancelOrders(AdminCancelOrdersInstruction) => { unimplemented!()}
-            AmmInstruction::CreateConfigAccount => { unimplemented!()}
-            AmmInstruction::UpdateConfigAccount(ConfigArgs) => { unimplemented!()}
+            AmmInstruction::AdminCancelOrders(AdminCancelOrdersInstruction) => {
+                unimplemented!()
+            }
+            AmmInstruction::CreateConfigAccount => {
+                unimplemented!()
+            }
+            AmmInstruction::UpdateConfigAccount(ConfigArgs) => {
+                unimplemented!()
+            }
         }
     }
 }

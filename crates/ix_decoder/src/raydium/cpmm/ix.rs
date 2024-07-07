@@ -5,11 +5,7 @@
 
 use super::state::{AmmParams, Fees, LastOrderDistance, SimulateParams};
 use arrayref::array_ref;
-use solana_sdk::{
-    program_error::ProgramError,
-    program_pack::Pack,
-    pubkey::Pubkey,
-};
+use solana_sdk::{program_error::ProgramError, program_pack::Pack, pubkey::Pubkey};
 use std::convert::TryInto;
 use std::mem::size_of;
 
