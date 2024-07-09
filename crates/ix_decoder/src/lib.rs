@@ -11,6 +11,7 @@ use types::{
 };
 pub mod raydium;
 pub mod types;
+pub mod idl;
 
 pub struct Decoder {}
 
