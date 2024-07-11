@@ -30,7 +30,6 @@ impl ProgramDecoder for Programs {
                     .with_context(|| "failed to decde Raydium::CpmmV1");
             }
         }
-        Err(anyhow!("TODO"))
     }
     fn debug(&self) -> String {
         match self {
