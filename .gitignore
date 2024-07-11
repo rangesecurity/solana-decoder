@@ -14,3 +14,5 @@ Cargo.lock
 *.pdb
 
 anchor_decoder/node_modules/
+
+anchor_decoder/src/index.js
