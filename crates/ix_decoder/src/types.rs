@@ -30,11 +30,14 @@ pub struct Program {
     pub name: String,
 }
 
-#[derive(Clone, Serialize, Deserialize, Debug)]
+#[derive(Clone, Serialize, Deserialize, Debug, Default)]
 pub struct DecodedInstruction {
+    /// the name of the function which was invoked
+    pub name: String,
     /// Maps the name of an instruction data input to it's value
-    pub data: HashMap<IxDataInput, serde_json::Value>,
-    pub accounts: HashMap<IxAccountInput, serde_json::Value>,
+    pub data: HashMap<String, serde_json::Value>,
+    /// Maps the name of an instruction account input to its value
+    pub accounts: HashMap<String, serde_json::Value>,
 }
 
 #[derive(Clone, PartialEq, Eq, Hash, Serialize, Deserialize, Debug)]
@@ -45,13 +48,6 @@ pub struct IxAccountInput {
 
 #[derive(Clone, PartialEq, Eq, Hash, Serialize, Deserialize, Debug)]
 pub struct IxDataInput {
-    /// Indicates the order in which this input was provided
-    /// 0 indicating it is the first instruction data argument
-    ///
-    ///
-    /// Realistically a u8 should be fine, but for maximum guarantee
-    /// use u16 allowing up to 65k inputs
-    pub index: u16,
     pub name: String,
 }
 
