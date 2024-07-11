@@ -17,9 +17,10 @@ pub struct IdlParser {
 impl IdlParser {
     pub fn load_idl(&mut self, program_id: Pubkey, idl: &str) -> Result<()> {
         let parsed_idl: anchor_client_gen_utils::idl::IdlJsonDefinition = serde_json::from_str(idl).with_context(|| "failed to deserialize idl")?;
-        println!("{:#?}", parsed_idl.instructions);
+
         for ix in parsed_idl.instructions {
             if ix.name == "setParams" {
+                ix
                 println!("{ix:#?}");
             }
         }
