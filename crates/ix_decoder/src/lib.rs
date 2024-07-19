@@ -12,11 +12,12 @@ use types::{
 pub mod raydium;
 pub mod types;
 
-pub struct Decoder {}
+#[derive(Clone, Copy)]
+pub struct DecodeMatcher {}
 
-impl Decoder {
+impl DecodeMatcher {
     /// Attemps to decode the given instruction, returning an error if we failed to decode
-    pub fn try_new_decoder(ix: UiInstruction) -> Result<Box<dyn ProgramDecoder>> {
+    pub fn try_new_decoder(self, ix: UiInstruction) -> Result<Box<dyn ProgramDecoder>> {
         match ix {
             //
             UiInstruction::Compiled(ix) => {
@@ -53,25 +54,7 @@ impl Decoder {
                     }
                                          */
                 }
-                UiParsedInstruction::Parsed(ix) => {
-                    /*
-                    "parsed": {
-                      "info": {
-                        "authority": "5QLW43S3hcq8yGwNymf7VN3r81PGeFGcygP6rGgTC1Rr",
-                        "destination": "DY6pE7aiDafuk35REZF9p9av3vbV2VQrvdZ4YyB1pZ4C",
-                        "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
-                        "source": "DxKgFtuxoevwUYV8rUJSXbL4vNVkgHBiS46KkW4x8f7P",
-                        "tokenAmount": {
-                          "amount": "50000000",
-                          "decimals": 6,
-                          "uiAmount": 50,
-                          "uiAmountString": "50"
-                        }
-                      },
-                      "type": "transferChecked"
-                    }*/
-                    todo!("not implemented")
-                }
+                UiParsedInstruction::Parsed(ix) => return Err(anyhow!("unsupported instruction format"))
             },
         }
     }
