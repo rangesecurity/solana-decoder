@@ -1,0 +1,29 @@
+[package]
+name = "decoder_api"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies.axum]
+version = "0.7"
+[dependencies.serde]
+version = "1"
+features = ["derive"]
+[dependencies.serde_json]
+version = "1"
+[dependencies.tokio]
+version = "1"
+features = ["full"]
+[dependencies.tracing]
+version = "0.1"
+[dependencies.tracing-subscriber]
+version = "0.3"
+features = ["env-filter"]
+[dependencies.solana-transaction-status]
+version = "1.18"
+[dependencies.anyhow]
+version = "1"
+[dependencies.clap]
+version = "4"
+[dependencies.ix_decoder]
+path = "../ix_decoder"
