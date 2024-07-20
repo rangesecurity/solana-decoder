@@ -16,6 +16,8 @@ use {
 
 #[tokio::main]
 pub async fn main() -> anyhow::Result<()> {
+    tracing_subscriber::fmt::init();
+
     let matches = Command::new("decoder-api")
         .about("cli for the solana instruction decoder api")
         .subcommands(vec![Command::new("start")
